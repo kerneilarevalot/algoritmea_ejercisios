@@ -1,0 +1,32 @@
+<!--
+ Nombre:programa para saber si es positivo o negativo
+Entradas:
+	a:un número aleatorio
+Salida:
+	positivo/negativo: respuesta de que el numero es negativo o psitivo
+Proceso: pide un número cualquiera y con ese indica basándose en si está atrás o adelante del 0 para decir si es positivo o negativo, siendo 0 positivos
+-->
+<!doctype html>
+<html lang=en>
+    <head>
+<meta charset="UFT-8"
+<meta name="viewport" content="width=decive-wdth, initial-scale=1.0">
+<title>positivonegativo</title>
+    </head>
+ <body>
+        <h2>ingrese un numero</h2>
+    <input type="number" id="numero">
+    <button onclick="verificar()">comprobar</button>
+    <p id="resultado"></p>
+    <script>
+        function verificar(){
+            let numero= parseFloat(document.getElementById("numero").value);
+            let resultado="";
+            if (numero>0){resultado = "el numero es positivo";}
+                else if (numero < 0){resultado = "el numero es negativo";}
+                else {resultado = "el numero es cero(positivo)";}
+document.getElementById("resultado").innerText = resultado;
+    }
+    </script>
+ </body>
+</html>

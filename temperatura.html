@@ -1,0 +1,33 @@
+<!-- 
+Nombre:programa para saber si la temperatura es la necesaria para congelarse el agua
+Entradas:
+    Temperatura:una temperatura aleatoria
+Salida:
+    ideal/mayor:indica si la temperatura proporcionada es la ideal o incorrecta para congelar
+Proceso: pide una temperatura cualquiera y con ese indica basándose si está atrás, adelante o igual  0 para decir si es la ideal o incorrecta para congelación
+-->
+
+<!doctype html>
+<html lang=en>
+    <head>
+<meta charset="UFT-8"
+<meta name="viewport" content="width=decive-wdth, initial-scale=1.0">
+<title>positivonegativo</title>
+    </head>
+ <body>
+        <h2>ingrese una temperatura</h2>
+    <input type="number" id="temperatura">
+    <button onclick="verificar()">comprobar</button>
+    <p id="resultado"></p>
+    <script>
+        function verificar(){
+            let temperatura= parseFloat(document.getElementById("temperatura").value);
+            let resultado="";
+            if (temperatura>0){resultado = "la temperatura es mucho mayor para congelar";}
+                else if (temperatura <= 0){resultado = "la temperatura es ideal para congelar";}
+                else {resultado = "lo indicado es incorrecto";}
+document.getElementById("resultado").innerText = resultado;
+    }
+    </script>
+ </body>
+</html>
